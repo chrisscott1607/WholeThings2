@@ -1,9 +1,10 @@
 import React from 'react'
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap'
 import { Link } from 'react-router-dom'
+import { render } from '@testing-library/react'
 
 function Home(props) {
-    const renderLink = (link) => {
+    const renderLink = ({link}) => {
         return (
             link.map(item => {
                 return ( 
@@ -40,11 +41,12 @@ function Home(props) {
         
     }
     
-    return (
+    render (
+        //console.log(renderLink(props.promotion))
         <div className="container"> 
             <div className='row'>   
                 <div className='col'>
-                    {renderLink(props.promotion)}
+                    link={renderLink(props.promotion)}
                 </div>
             </div>
             <div className='row'>
@@ -64,3 +66,5 @@ function Home(props) {
 }
 
 export default Home
+
+

@@ -20,23 +20,23 @@ class Main extends Component{
         }
     }
 
-    render(){
+    Homepage = () => {
+        return (
+            <Home 
+                promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
+                partners={this.state.partners}
+                links={this.state.links}
+            />
+        )
+    }
 
-        const Homepage = () => {
-            return (
-                <Home 
-                    promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
-                    partners={this.state.partners}
-                    links={this.state.links}
-                />
-            )
-        }
+    render(){
 
         return (
             <div>
                 <Header/>
                 <Switch>
-                    <Route path='/home' component={Homepage} />
+                    <Route path='/home' component={Main.Homepage} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer/>

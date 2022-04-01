@@ -1,3 +1,14 @@
+.navbar-bright {
+  background-color: #00ff6a;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
+
 .App {
   text-align: center;
 }
@@ -13,7 +24,18 @@
   }
 }
 
-.App-header {
+.header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.footer {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
